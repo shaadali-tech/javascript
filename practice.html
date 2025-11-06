@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    #my-button{
+      height: 50px;
+      width: 50px;
+      
+      
+    }
+
+    .odd{
+      background-color: aqua;
+
+    }
+    .even{
+      background-color: blueviolet;
+    }
+  </style>
+
+  <h3 id="greeting"></h3>
+  <button    id="my-button"    onclick="buttonpressed()">0</button>
+
+  <script>
+    let heading=document.querySelector('#greeting');
+    let date=new Date();
+    let hours=date.getHours();
+    if(hours>5 && hours<12){
+      heading.innerText='good morning';
+    }
+
+    let nooftimesclicked=localStorage.getItem('nooftimesclicked')||0;
+    function buttonpressed(){
+      console.log("pressed");
+      localStorage.setItem('nooftimesclicked',nooftimesclicked)
+      let button=document.querySelector('#my-button');
+      nooftimesclicked++;
+      if (nooftimesclicked%2===0){
+        button.classList.add('even');
+        button.classList.remove('odd');
+      }
+      else{
+        button.classList.remove('even');
+        button.classList.add('odd');
+      }
+      button.innerText=nooftimesclicked;
+
+    }
+
+  </script>
+</body>
+</html>

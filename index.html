@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bat ball game </title>
+  <style>
+    body{
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+
+<body>
+ 
+  <h1>bat ball game</h1>
+  <button
+
+  onclick="
+  const userchoice='user have choose bat';
+  generatecomputerchoice();
+  
+  let resultmsg;
+  if(computerchoice===`bat`){
+    score.Tie++;
+    resultmsg='its a tie';
+  }
+  else if(computerchoice===`ball`){
+    score.win++;
+    resultmsg='user have won';
+  }
+  else{
+    score.loss++;
+    resultmsg=`computer have won`;
+  }
+
+alert(`User choice is bat. Computer choice is ${computerchoice} and ${resultmsg}`);
+console.log(score)
+
+
+
+  
+  
+  
+  "
+  
+  >BAt</button>
+  <button
+  onclick="
+  const userchoiceball='user have choose ball';
+  generatecomputerchoice();
+  resultmsg='';
+  if(computerchoice===`bat`){
+    score.win++;
+    resultmsg='its a Six';
+  }
+  else if(computerchoice===`ball`){
+    score.Tie++;
+    resultmsg='Its a tie';
+  }
+  else{
+    score.loss++;
+    resultmsg=`computer have won`;
+  }
+
+alert(`User choice is ball. Computer choice is ${computerchoice} and ${resultmsg}`);
+console.log(score)
+
+  ">BALL</button>
+
+
+  <button
+  onclick="
+  const userchoicestump='user have choose Stump';
+  
+  generatecomputerchoice();
+  
+  resultmsg='';
+  if(computerchoice===`bat`){
+    score.loss++;
+    resultmsg='its a loss';
+  }
+  else if(computerchoice===`ball`){
+    score.win++;
+    resultmsg='Its a Wicket';
+  }
+  else{
+    score.Tie++;
+    resultmsg=`Its a tie`;
+  }
+
+alert(`User choice is ball. Computer choice is ${computerchoice} and ${resultmsg}`);
+console.log(score)
+">STUMP</button>
+
+  <script>
+
+    let score={
+      win:0,
+      loss:0,
+      Tie:0,
+    }
+
+    let computerchoice='';
+    function generatecomputerchoice(){
+      
+      randomnumber=Math.random();
+      randomnumber=randomnumber*3;
+      if(randomnumber>0 && randomnumber<=1){
+     computerchoice='bat';
+     }
+      else if(randomnumber>1 && randomnumber<=2){
+     computerchoice='ball';
+     }
+      else {
+     computerchoice='stump';
+      }
+    }
+      
+    localStorage.setItem('shaad','ali');
+
+  </script>
+</body>
+</html>
