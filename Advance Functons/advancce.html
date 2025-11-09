@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .btn-size{
+      height: 30px;
+      width: 70px;
+      color: white;
+      background-color: red;
+      font-size: 20px;
+      border: none;
+      
+    }
+
+    .btn-size-double{
+      height: 60px;
+      width: 140px;
+      color: white;
+      background-color: red;
+      font-size: 40px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<button id="Mybutton">
+  Click ME
+</button>
+
+<button  class="btn-size" onclick="growsize()">Grow</button>
+  <script>
+
+function growsize(){
+  let size=document.querySelector(".btn-size");
+  size.classList.add(".btn-size-double");
+  size.classList.remove(".btn-size");
+}
+
+
+
+
+
+
+
+
+
+// let multiply= (num1,num2) => num1*num2;
+
+
+// console.log(multiply(5));
+
+// let arr=[1,2,3,4,5];
+// let squares=arr.map(num => 
+//   {
+//     return num*num;
+//   }
+// );
+
+// console.log(squares);
+//   let sum=(num1,num2) => {
+//     return num1+num2;
+//   }
+
+//   let date=new Date();
+//   let time=date.getSeconds();
+// let alarm=function(){
+//   console.log(`HIii Shaadu. Time is ${time}`);
+// }
+
+//  setInterval(alarm,1000)
+
+// sum(1,2)
+
+// let buttonelement=document.querySelector("#Mybutton");
+// buttonelement.addEventListener('click',event => console.log('I am Clicked'));
+
+</script>
+</body>
+</html>
